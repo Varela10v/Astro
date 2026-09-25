@@ -28,6 +28,26 @@ const title = "Pokemon Static";
     class="grid grid-cols-1 sm:grid-cols-4 md:grid-cols-5 gap-4 mt-5"
   >
     {page.data.map(({ name, url }) => (<PokemonCard name={name} url={url} />
+
     ))}
+  </section>
+  <section class="flex mt-10 gap-2 items-center">
+
+    <a class:list={
+    ["btn",{
+      disabled: !page.url.prev
+   }]
+  }
+  href={page.url.prev}>Anteriores</a>
+
+  <a class:list={
+    ["btn",{
+      disabled: !page.url.next
+   }]
+  }
+  href={page.url.next}>Siguientes</a>
+
+    <div class="flex flex-1"></div>
+    <span class="text-xl font-bold">Pagina {page.currentPage}</span>
   </section>
 </MainLayout>
