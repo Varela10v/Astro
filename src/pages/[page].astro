@@ -1,8 +1,8 @@
 ---
 import type { GetStaticPaths } from "astro";
 
-import MainLayout from "../layouts/MainLayout.astro";
-import PokemonCard from "../components/Pokemons/PokemonCard.astro";
+import PokemonCard from '@components/Pokemons/PokemonCard.astro';
+import MainLayout from '@layouts/MainLayout.astro';
 
 type PokemonListResponse = {
   results: Array<{ name: string; url: string }>;
