@@ -9,3 +9,7 @@
     @apply bg-gray-600 text-gray-400;
   }
 }
+
+@view-transition {
+  navigation: auto;
+}
